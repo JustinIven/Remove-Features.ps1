@@ -1,0 +1,154 @@
+{
+	"Printer": [
+		"Microsoft XPS Document Writer",
+		"Fax"
+	],
+	"WindowsPackage": [
+		"*Windows-mediaplayer*",
+		"*StepsRecorder*",
+		"*PowerShell-ISE*",
+		"*TabletPCMath*",
+		"*OpenSSH*",
+		"*QuickAssist*",
+		"*EMS-SAC-Desktop-Tools*",
+		"*DirectX*",
+		"*Hello-Face*",
+		"*Printing-PMCPPC-FoD*",
+		"*Printing-WFS-FoD*"
+		//"*Wifi*"
+		//"*en-US*",
+		//"*wow64*"
+	],
+	"WindowsCapability": [
+		"*Browser.Internet*"
+		//"*en-US*"
+	],
+	"WindowsOptionalFeature": [
+		"MicrosoftWindowsPowerShellV2Root" // https://www.stigviewer.com/stig/windows_10/2017-04-28/finding/V-70637
+	],
+	"AppxPackage": [
+		"Microsoft.Xbox.TCUI",
+		"Microsoft.XboxApp",
+		"Microsoft.XboxGameOverlay",
+		"Microsoft.XboxGamingOverlay",
+		"Microsoft.XboxIdentityProvider",
+		"Microsoft.XboxSpeechToTextOverlay",
+		"*Microsoft.549981C3F5F10*",
+		"Microsoft.WindowsMaps",
+		"Microsoft.WindowsFeedbackHub",
+		"Microsoft.WindowsCamera",
+		"Microsoft.WindowsAlarms",
+		"Microsoft.Wallet",
+		"Microsoft.SkypeApp",
+		"Microsoft.BingWeather",
+		"Microsoft.BingNews",
+		"Microsoft.Microsoft3DViewer",
+		"Microsoft.MicrosoftOfficeHub",
+		"Microsoft.YourPhone",
+		"Microsoft.WindowsSoundRecorder",
+		"Microsoft.MixedReality.Portal",
+		"Microsoft.MicrosoftSolitaireCollection",
+		"Microsoft.Getstarted",
+		"microsoft.windowscommunicationsapps",
+		"Microsoft.People",
+		// Microsoft.ScreenSketch",
+		"Microsoft.GetHelp",
+		"Microsoft.ZuneMusic",
+		"Microsoft.ZuneVideo",
+		// "Microsoft.MicrosoftStickyNotes",
+		"Microsoft.WindowsStore",
+		"Microsoft.MSPaint", // Paint 3D
+		"Microsoft.Office.OneNote",
+		"Microsoft.DesktopAppInstaller",
+		"Microsoft.StorePurchaseApp",
+		"Microsoft.PowerAutomateDesktop",
+		// "Microsoft.Todos",
+		"MicrosoftTeams",
+		"Microsoft.GamingApp",
+		"Microsoft.WindowsTerminal",
+		"MicrosoftCorporationII.QuickAssist",
+		"Clipchamp.Clipchamp"
+	],
+	"ScheduledTask": [
+		"MNO", // Mobile broadband account experience metadata parser
+		"AnalyzeSystem", // This task analyzes the system looking for conditions that may cause high energy use.
+		"Cellular", // Related to cellular devices
+		"*Compatibility*", // Collects program telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.
+		"Consolidator", // If the user has consented to participate in the Windows Customer Experience Improvement Program, this job collects and sends usage data to Microsoft.
+		"Diagnostics", // (DiskFootprint in task path) 'DiskFootprint' is the combined contribution of all processes that issue storage I/O in the form of storage reads, writes, and flushes.
+		"FamilySafetyMonitor", // Initializes Family Safety monitoring and enforcement.
+		"FamilySafetyRefreshTask", // Synchronizes the latest settings with the Microsoft family features service.
+		"MapsToastTask", // This task shows various Map related toasts
+		"Microsoft-Windows-DiskDiagnosticDataCollector", // The Windows Disk Diagnostic reports general disk and system information to Microsoft for users participating in the Customer Experience Program.
+		"NotificationTask", // Background task for performing per user and web interactions
+		"ProcessMemoryDiagnosticEvents", // Schedules a memory diagnostic in response to system events.
+		"Proxy", // This task collects and uploads autochk SQM data if opted-in to the Microsoft Customer Experience Improvement Program.
+		"QueueReporting", // Windows Error Reporting task to process queued reports.
+		"RecommendedTroubleshootingScanner", // Check for recommended troubleshooting from Microsoft
+		"RegIdleBackup", // Registry Idle Backup Task
+		"RunFullMemoryDiagnostic", // Detects and mitigates problems in physical memory (RAM).
+		"ScheduledDefrag", // This task optimizes local storage drives.
+		"SilentCleanup", // Maintenance task used by the system to launch a silent auto disk cleanup when running low on free disk space.
+		"SpeechModelDownloadTask",
+		"Sqm-Tasks", // This task gathers information about the Trusted Platform Module (TPM), Secure Boot, and Measured Boot.
+		"SR", // This task creates regular system protection points.
+		"StartComponentCleanup", // Servicing task that may be better performed during maintenance windows (https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder)
+		"StartupAppTask", // Scans startup entries and raises notification to the user if there are too many startup entries.
+		"SyspartRepair", // Repairs the system partition.
+		"WindowsActionDialog", // Location Notification
+		"WinSAT", // Measures a system's performance and capabilities
+		"XblGameSaveTask", // Xbox Live GameSave standby task
+		"UsbCeip", // Customer Experience Improvement Program task
+		"VerifyWinRE", // Customer Experience Improvement Program task
+		"Work Folders Logon Synchronization", // Customer Experience Improvement Program task
+		"Work Folders Maintenance Work" // Customer Experience Improvement Program task
+	],
+	"Service": [
+		"autotimesvc", // Cellular Time service: this service sets time based on NITZ messages from a Mobile Network (https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support)
+		"BcastDVRUserService", // This user service is used for Game Recordings and Live Broadcasts (https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support)
+		"CaptureService", // Enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API. (https://learn.microsoft.com/en-us/uwp/api/windows.graphics.capture?view=winrt-19041&preserve-view=true)
+		"CDPSvc", // This service is used for Connected Devices Platform scenarios (https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736)
+		"CDPUserSvc", // This service is used for Connected Devices Platform scenarios"
+		"DiagSvc", // Executes diagnostic actions for troubleshooting support"
+		"DiagTrack", // Connected User Experiences and Telemetry service, manages the event driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics. (https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+		"DPS", // The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function. (https://docs.microsoft.com/en-us/uwp/api/Windows.System.Diagnostics?view=winrt-19041)
+		"CDPUserSvc", // Enables the detection, download and installation of device-related software."
+		"DusmSvc", // Data Usage service: network data usage, data limit, restrict background data, metered networks. (https://docs.microsoft.com/en-us/uwp/schemas/mobilebroadbandschema/dusm/schema-root)
+		"icssvc", // Windows Mobile Hotspot (tethering) service: provides the ability to share a cellular data connection with another device. (https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041)
+		// "InstallService", // Provides infrastructure support for the Microsoft Store."
+		"lfsvc", // Geolocation Service. This service monitors the current location of the system and manages geofences (a geographical location with associated events). If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences. (https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Geolocation?view=winrt-19041)
+		"MapsBroker", // Downloaded maps manager. Windows service for application access to downloaded maps. (https://docs.microsoft.com/en-us/uwp/api/Windows.Services.Maps?view=winrt-19041)
+		"MessagingService", // Service supporting text messaging and related functionality."
+		// "OneSyncSvc", // This service synchronizes mail, contacts, calendar and various other user data."
+		// "PimIndexMaintenanceSvc", // Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results."
+		"Power", // Manages power policy and power policy notification delivery."
+		"SEMgrSvc", // Payments and NFC/SE Manager: manages payments and Near Field Communication (NFC) based secure elements."
+		"SmsRouter", // Microsoft Windows SMS Router Service: routes messages based on rules to appropriate clients. (https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/routing-service)
+		"SysMain", // Maintains and improves system performance over time."
+		"UsoSvc", // Manages Windows Updates. If stopped, your devices will not be able to download and install the latest updates."
+		"VSS", // Volume Shadow Copy (https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)
+		"WdiSystemHost", // Diagnostic System Host service. The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context.  If this service is stopped, any diagnostics that depend on it will no longer function."
+		"WerSvc", // Windows Error Reporting Service allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. (https://docs.microsoft.com/en-us/windows/win32/wer/windows-error-reporting)
+		"XblAuthManager", // Xbox Live Auth Manager service provides authentication and authorization services for interacting with Xbox Live."
+		"XblGameSave", // Xbox Live Game Save service syncs save data for Xbox Live save enabled games."
+		"XboxGipSvc", // Xbox Accessory Management manages connected Xbox accessories."
+		"XboxNetApiSvc", // Xbox Live Networking Service"
+		"RmSvc" // Radio Management and Airplane Mode Service."
+	],
+	"UserServices": [
+		// TBD: https://learn.microsoft.com/en-us/windows/application-management/per-user-services-in-windows
+	],
+	"Autologger": [
+		"Cellcore", // https://learn.microsoft.com/en-us/windows-hardware/drivers/network/cellular-architecture-and-driver-model
+		"CloudExperienceHostOOBE", // https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-how-it-works-technology#cloud-experience-host
+		"DiagLog", // https://learn.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
+		"RadioMgr", // https://learn.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-device-drivers
+		"ReadyBoot", // https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/readyboot-analysis
+		"WDIContextLog", // Wireless Local Area Network (WLAN) Device Driver Interface, and is documented here.
+		"WiFiDriverIHVSession", // https://learn.microsoft.com/en-us/windows-hardware/drivers/network/user-initiated-feedback-normal-mode
+		"WiFiSession", // Diagnostic log for WLAN technology. If Wi-Fi isn't implemented, there's no need for this logger
+		"WinPhoneCritical", // Diagnostic log for phone (Windows?). If not using phones, no need for this logger
+		"ReFSLog", // Diagnostic log for ReFS. Unless using ReFS, this trace log should not be needed
+		"Mellanox-Kernel" // Diagnostic log for ReFS. Unless using ReFS, this trace log should not be needed
+	]
+}
