@@ -1,5 +1,55 @@
 #Requires -RunAsAdministrator
 
+<#
+.SYNOPSIS
+	Removes and disables unwanted Windows features, apps, services, and telemetry based on a configuration file.
+
+.DESCRIPTION
+	Reads a JSON configuration file and, for each defined category, removes or disables the
+	matching items on the local machine. Supported categories are:
+	  - Printer                  : removed with Remove-Printer
+	  - WindowsPackage           : removed with Remove-WindowsPackage
+	  - WindowsCapability        : removed with Remove-WindowsCapability
+	  - WindowsOptionalFeature   : disabled with Disable-WindowsOptionalFeature
+	  - AppxPackage              : removed for all users with Remove-AppxPackage
+	                               (and matching provisioned packages with Remove-AppxProvisionedPackage)
+	  - ScheduledTask            : disabled with Disable-ScheduledTask
+	  - Service                  : startup type set to Disabled with Set-Service
+	  - Autologger               : disabled via the registry (Start = 0)
+
+	Names in the configuration file support wildcards (e.g. "*Xbox*"). The configuration file
+	may contain // and /* */ comments, which are stripped before parsing.
+
+	All actions are written to a log file and echoed to the console with color-coded levels.
+
+	This script must be run in an elevated (administrator) PowerShell session.
+
+.PARAMETER Restart
+	If specified, restarts the computer after all changes have been applied.
+
+.PARAMETER SettingsFile
+	Path to the JSON/JSONC configuration file describing what to remove.
+	Defaults to ".\settings.json".
+
+.PARAMETER LogFile
+	Path to the log file that actions are appended to.
+	Defaults to ".\Remove-Features.log".
+
+.EXAMPLE
+	.\Remove-Features.ps1 -SettingsFile .\Remove-Features.conf.jsonc
+
+	Applies the changes defined in Remove-Features.conf.jsonc without restarting.
+
+.EXAMPLE
+	.\Remove-Features.ps1 -SettingsFile .\Remove-Features.conf.jsonc -Restart
+
+	Applies the changes and restarts the computer afterwards.
+
+.NOTES
+	Requires administrator privileges. Review the configuration file carefully before running,
+	as removing packages, services, or features can be difficult to reverse.
+#>
+
 param (
 	[Parameter(Mandatory=$false)]
 	[switch]$Restart,
